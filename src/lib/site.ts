@@ -1,8 +1,10 @@
 /* ─── Site data ──────────────────────────────────────────────
-   The basics about Sharon's Cakes in one place. The `portrait`
-   field is the swappable hero photo of Sharon: drop a bigger,
-   better portrait at the path it points to (public/sharon.jpg)
-   and the whole site picks it up — no code changes needed. */
+   The basics about Sharon's Cakes in one place. Two photos of
+   Sharon live here: `heroImage` (public/hero.jpg), the wide
+   showcase shot that fills the homepage hero, and `portrait`
+   (public/sharon.jpg), her real profile photo, used in the
+   Meet Sharon section and the schema. Swap either file at its
+   path and the site picks it up — no code changes needed. */
 
 export const site = {
   name: "Sharon's Cakes",
@@ -11,8 +13,14 @@ export const site = {
   state: "Maryland",
   area: "Middle River, Maryland (Baltimore area)",
   facebookUrl: "https://facebook.com/sharon.abplanalpdavis",
-  /** Hero portrait of Sharon. Replace public/sharon.jpg with a
-      larger portrait any time; keep the same filename. */
+  /** Wide showcase photo that fills the homepage hero: Sharon
+      in her pink bakery, holding a two-tier pink cake. */
+  heroImage: "/hero.jpg",
+  heroAlt:
+    "Sharon in her pink bakery, smiling and holding a two-tier pink cake decorated with roses",
+  /** Sharon's real profile photo, used in Meet Sharon. Replace
+      public/sharon.jpg with a larger portrait any time; keep
+      the same filename. */
   portrait: "/sharon.jpg",
   portraitAlt: "Sharon Abplanalp Davis, the baker behind Sharon's Cakes",
   headline: "Too pretty to eat. Eat it anyway.",

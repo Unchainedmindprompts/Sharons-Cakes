@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Sharon's Cakes — Too Pretty to Eat. Eat It Anyway.",
     description,
-    images: [{ url: site.portrait, alt: site.portraitAlt }],
+    images: [{ url: site.heroImage, alt: site.heroAlt }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sharon's Cakes — Too Pretty to Eat. Eat It Anyway.",
     description,
-    images: [site.portrait],
+    images: [site.heroImage],
   },
 };
 
