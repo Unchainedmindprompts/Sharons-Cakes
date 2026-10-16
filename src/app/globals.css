@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Loud & joyful palette — hot pink, cream, deep chocolate,
+     with teal and golden-yellow pops. */
+  --color-cream: #fff6ea;
+  --color-cream-deep: #fdeeda;
+  --color-choco: #2e1a0e;
+  --color-choco-soft: #5a3a22;
+  --color-punch: #e5267e;
+  --color-punch-deep: #b30f5e;
+  --color-tealpop: #0fa3a3;
+  --color-teal-deep: #0a6e6e;
+  --color-yolk: #ffc531;
+
+  /* Display: Shrikhand (chunky, joyful). Body: Nunito (rounded). */
+  --font-display: var(--font-shrikhand), "Arial Black", sans-serif;
+  --font-sans: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+}
+
+:root {
+  --background: #fff6ea;
+  --foreground: #2e1a0e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #e5267e;
+  color: #fff6ea;
+}
+
+/* Hard offset "sticker" shadow used on badges, cards, buttons. */
+.sticker-shadow {
+  box-shadow: 5px 5px 0 0 #2e1a0e;
+}
+.sticker-shadow-sm {
+  box-shadow: 3px 3px 0 0 #2e1a0e;
+}
+
+/* Marquee: the strip is rendered twice; sliding one full copy
+   width loops it seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Gentle bob for hero stickers. */
+@keyframes bob {
+  0%,
+  100% {
+    transform: rotate(var(--bob-rot, -4deg)) translateY(0);
+  }
+  50% {
+    transform: rotate(var(--bob-rot, -4deg)) translateY(-7px);
+  }
+}
+.animate-bob {
+  animation: bob 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-bob {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Visible keyboard focus everywhere, in deep teal so it reads
+   on cream, pink, and chocolate alike. */
+:focus-visible {
+  outline: 3px solid #0a6e6e;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scalloped edge: semicircles of currentColor along the top of
+   a 14px strip, repeating every 28px. Place directly above the
+   section whose color it carries. */
+.scallop-up {
+  height: 14px;
+  background-image: radial-gradient(
+    circle at 50% 100%,
+    currentColor 10.5px,
+    transparent 11.5px
+  );
+  background-size: 28px 14px;
+  background-repeat: repeat-x;
+  background-position: bottom center;
+}
+
+/* Card lift: grows the hard sticker shadow as the card rises. */
+.lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 9px 9px 0 0 #2e1a0e;
+}
