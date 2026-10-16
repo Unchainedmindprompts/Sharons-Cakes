@@ -13,11 +13,11 @@ export const site = {
   state: "Maryland",
   area: "Middle River, Maryland (Baltimore area)",
   facebookUrl: "https://facebook.com/sharon.abplanalpdavis",
-  /** Wide showcase photo that fills the homepage hero: Sharon
-      in her pink bakery, holding a two-tier pink cake. */
+  /** Wide showcase photo that fills the homepage hero: her
+      cakes on the island of a modern farmhouse kitchen. */
   heroImage: "/hero.jpg",
   heroAlt:
-    "Sharon in her pink bakery, smiling and holding a two-tier pink cake decorated with roses",
+    "Sharon's cakes on a white marble kitchen island in a black-and-white modern farmhouse kitchen: a two-tier 'oh baby' cake, a chocolate drip birthday cake, a white rose cake, and a tray of pink cupcakes",
   /** Sharon's real profile photo, used in Meet Sharon. Replace
       public/sharon.jpg with a larger portrait any time; keep
       the same filename. */
