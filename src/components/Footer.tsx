@@ -25,6 +25,17 @@ export default function Footer() {
         <p className="text-xs text-cream/50">
           © {new Date().getFullYear()} {site.name}
         </p>
+        <p className="text-xs text-cream/50">
+          Website by{" "}
+          <a
+            href="https://kodecite.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:text-cream"
+          >
+            KodeCite
+          </a>
+        </p>
       </div>
     </footer>
   );
