@@ -25,7 +25,7 @@ export default function MeetSharon() {
               alt={site.portraitAlt}
               fill
               sizes="(max-width: 640px) 224px, 256px"
-              className="object-cover"
+              className="object-cover object-[28%_50%]"
             />
           </div>
           <div className="sticker-shadow-sm absolute -right-4 -bottom-4 rotate-3 rounded-full border-2 border-choco bg-yolk px-3 py-1">
