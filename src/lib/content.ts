@@ -102,6 +102,110 @@ export const goods: Good[] = goodsData.map((g) => ({
   photo: cakePhoto(g.slug),
 }));
 
+/* ── The Gallery ────────────────────────────────────────────
+   More of Sharon's real cakes, photographed in her kitchen
+   and at the parties they were made for. Captions describe
+   what's in the photo — nothing invented beyond that. */
+
+export interface GalleryItem {
+  file: string;
+  title: string;
+  caption: string;
+  width: number;
+  height: number;
+}
+
+export const gallery: GalleryItem[] = [
+  {
+    file: "maryland-crab-cake",
+    title: "The Full Maryland",
+    caption:
+      "Two crabs, a beach of crumbs, and a whole tin of Old Bay standing guard. This is what happens when a Middle River baker does a crab feast in cake form.",
+    width: 638,
+    height: 1100,
+  },
+  {
+    file: "teddy-bear-baby-shower-cake",
+    title: "Sweet Baby, Bear Edition",
+    caption:
+      "Five teddy bears, clouds, and enough pink to hear the “awww” from the next room.",
+    width: 562,
+    height: 1100,
+  },
+  {
+    file: "smores-birthday-cake",
+    title: "S'mores, No Campfire Required",
+    caption:
+      "Toasted marshmallows, graham crackers, and a chocolate drip doing the most.",
+    width: 781,
+    height: 1100,
+  },
+  {
+    file: "boho-wedding-cake",
+    title: "Mr & Mrs Wood",
+    caption:
+      "Two tiers, pampas grass, and white roses. The “I do” cake, Sharon style.",
+    width: 647,
+    height: 1100,
+  },
+  {
+    file: "army-graduation-cake",
+    title: "Reporting for Duty",
+    caption:
+      "A whole helicopter landed on this graduation cake. Congratulations, 2nd Lt Rhoads.",
+    width: 799,
+    height: 1100,
+  },
+  {
+    file: "glam-makeup-birthday-cake",
+    title: "Double Digits, Full Glam",
+    caption:
+      "Lipstick, lashes, and a quilted purse: turning ten is serious business.",
+    width: 664,
+    height: 1100,
+  },
+  {
+    file: "woodland-baby-shower-cake",
+    title: "The Whole Forest RSVP'd",
+    caption:
+      "Foxes, squirrels, and one very smug deer, all here to welcome the baby.",
+    width: 650,
+    height: 1100,
+  },
+  {
+    file: "christmas-fawn-cake",
+    title: "Oh Deer",
+    caption:
+      "A fawn, a jingle bell, and a chocolate drip. Christmas never stood a chance.",
+    width: 782,
+    height: 1100,
+  },
+  {
+    file: "black-ribbon-birthday-cake",
+    title: "All Tied Up",
+    caption:
+      "Black bows, red roses, and a buffalo check band. Birthday cake, but make it fashion.",
+    width: 701,
+    height: 1100,
+  },
+  {
+    file: "golden-candle-birthday-cake",
+    title: "Make a Wish",
+    caption:
+      "Seven gold candles and a ring of rosettes. Simple, classic, gone by the end of the song.",
+    width: 715,
+    height: 1100,
+  },
+  {
+    file: "chili-cookoff-cupcakes",
+    title: "The Cook-Off Dozen",
+    caption:
+      "Flame frosting and chili pepper toppers for the cook-off crowd. Sweet heat, hold the beans.",
+    width: 1100,
+    height: 1042,
+  },
+];
+
 /* ── Kind Words ─────────────────────────────────────────────
    Real comments from Sharon's Facebook cake posts, word for
    word. In the schema (lib/entities.ts) each one is a Review

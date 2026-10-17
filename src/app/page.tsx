@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Goods from "@/components/Goods";
+import Gallery from "@/components/Gallery";
 import KindWords from "@/components/KindWords";
 import MeetSharon from "@/components/MeetSharon";
 import Ordering from "@/components/Ordering";
@@ -14,6 +15,7 @@ export default function Home() {
       <JsonLd />
       <Hero />
       <Goods />
+      <Gallery />
 
       <div className="bg-cream">
         <ScallopDivider className="text-punch" />
